@@ -8,15 +8,16 @@ call vundle#begin()
 
   Plugin 'gmarik/Vundle.vim'
   Plugin 'git://github.com/mxw/vim-jsx.git'
-  Plugin 'https://github.com/Lokaltog/vim-distinguished.git'
+  Plugin 'git://github.com/Lokaltog/vim-distinguished.git'
   Plugin 'jelera/vim-javascript-syntax'
   Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'Raimondi/delimitMate'
   Plugin 'scrooloose/syntastic'
   Plugin 'https://github.com/kien/ctrlp.vim.git'
   Plugin 'rizzatti/dash.vim'
-  Plugin 'https://github.com/jeetsukumaran/vim-buffergator.git'
+  Plugin 'git://github.com/jeetsukumaran/vim-buffergator.git'
   Plugin 'airblade/vim-gitgutter'
+  Plugin 'git://github.com/Yggdroot/indentLine.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -32,7 +33,6 @@ set showmatch
 set hlsearch
 set incsearch
 
-set title
 set visualbell
 set noerrorbells
 
@@ -76,7 +76,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 "ctrlp settings
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn|node_modules)|\_site)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|\_site|node_modules)$',
   \ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
 \}
 
@@ -106,3 +106,8 @@ nmap <leader>bl :BuffergatorOpen<cr>
 
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
+
+let g:indentLine_color_term = 239
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_char = '·'
+let g:indentLine_leadingSpaceChar = '·'
