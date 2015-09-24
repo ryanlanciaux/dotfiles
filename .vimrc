@@ -17,6 +17,8 @@ call vundle#begin()
   Plugin 'rizzatti/dash.vim'
   Plugin 'git://github.com/jeetsukumaran/vim-buffergator.git'
   Plugin 'airblade/vim-gitgutter'
+  Plugin 'bling/vim-airline'
+  Plugin 'bling/vim-bufferline'
   Plugin 'git://github.com/Yggdroot/indentLine.git'
 
 call vundle#end()            " required
@@ -46,6 +48,7 @@ set noswapfile
 
 set mouse=a
 
+set laststatus=2
 set t_Co=256
 syntax on
 colorscheme distinguished
@@ -111,3 +114,15 @@ let g:indentLine_color_term = 239
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_char = '·'
 let g:indentLine_leadingSpaceChar = '·'
+let g:jsx_ext_required = 0 "Allow jsx
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
+
