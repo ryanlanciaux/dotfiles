@@ -20,6 +20,7 @@ call vundle#begin()
   Plugin 'bling/vim-airline'
   Plugin 'bling/vim-bufferline'
   Plugin 'git://github.com/Yggdroot/indentLine.git'
+  Plugin 'git://github.com/szw/vim-g.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
