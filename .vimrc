@@ -21,6 +21,8 @@ call vundle#begin()
   Plugin 'bling/vim-bufferline'
   Plugin 'git://github.com/Yggdroot/indentLine.git'
   Plugin 'git://github.com/szw/vim-g.git'
+  Plugin 'git://github.com/scrooloose/nerdtree.git'
+  Plugin 'dyng/ctrlsf.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -74,7 +76,8 @@ if has("gui_running")
   endif
 endif
 
-nmap <silent> <Leader>e :Explore<CR>          
+nmap <silent> <Leader>e :NERDTreeToggle<CR>
+"nmap <silent> <Leader>e :Explore<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
@@ -111,6 +114,13 @@ nmap <leader>bl :BuffergatorOpen<cr>
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 let g:indentLine_color_term = 239
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_char = '·'
@@ -126,4 +136,3 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-
