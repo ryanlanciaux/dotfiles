@@ -22,6 +22,7 @@ call vundle#begin()
   Plugin 'git://github.com/Yggdroot/indentLine.git'
   Plugin 'git://github.com/szw/vim-g.git'
   Plugin 'git://github.com/scrooloose/nerdtree.git'
+  Plugin 'git://github.com/ervandew/supertab.git'
   Plugin 'dyng/ctrlsf.vim'
 
 call vundle#end()            " required
@@ -136,3 +137,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+filetype indent off
