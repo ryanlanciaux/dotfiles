@@ -24,6 +24,7 @@ call vundle#begin()
   Plugin 'git://github.com/scrooloose/nerdtree.git'
   Plugin 'git://github.com/ervandew/supertab.git'
   Plugin 'dyng/ctrlsf.vim'
+  Plugin 'djoshea/vim-autoread'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -122,12 +123,19 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+"folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
 let g:indentLine_color_term = 239
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_char = '·'
 let g:indentLine_leadingSpaceChar = '·'
 let g:jsx_ext_required = 0 "Allow jsx
-
+nnoremap <Space> za
+let g:airline#extensions#tabline#enabled = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
