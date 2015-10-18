@@ -116,6 +116,10 @@ nmap <leader>bl :BuffergatorOpen<cr>
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
 
+nmap <Space> za
+
+nmap <leader>l :IndentLinesToggle
+nmap <leader>ls :
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -130,11 +134,11 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
 let g:indentLine_color_term = 239
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_char = '·'
+let g:indentLine_leadingSpaceEnabled = 0
+let g:indentLine_char = '︙'
 let g:indentLine_leadingSpaceChar = '·'
+
 let g:jsx_ext_required = 0 "Allow jsx
-nnoremap <Space> za
 let g:airline#extensions#tabline#enabled = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
