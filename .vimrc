@@ -25,6 +25,7 @@ call vundle#begin()
   Plugin 'git://github.com/ervandew/supertab.git'
   Plugin 'dyng/ctrlsf.vim'
   Plugin 'djoshea/vim-autoread'
+  Plugin 'schickling/vim-bufonly'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
