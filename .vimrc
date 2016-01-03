@@ -26,9 +26,12 @@ call vundle#begin()
   Plugin 'dyng/ctrlsf.vim'
   Plugin 'djoshea/vim-autoread'
   Plugin 'schickling/vim-bufonly'
+  Plugin 'git://github.com/rhysd/devdocs.vim.git'
+  Plugin 'git://github.com/vimwiki/vimwiki.git'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+filetype plugin on
 
 set history=1000
 set undolevels=1000
@@ -148,4 +151,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
+
+"wiki
+let g:vimwiki_list = [{'path': '~/projects/notebook'}]
 filetype indent off
