@@ -8,6 +8,7 @@ call vundle#begin()
 
   Plugin 'gmarik/Vundle.vim'
   Plugin 'git://github.com/mxw/vim-jsx.git'
+  Plugin 'git://github.com/tyrannicaltoucan/vim-deep-space.git'
   Plugin 'git://github.com/Lokaltog/vim-distinguished.git'
   Plugin 'jelera/vim-javascript-syntax'
   Plugin 'nathanaelkane/vim-indent-guides'
@@ -28,6 +29,8 @@ call vundle#begin()
   Plugin 'schickling/vim-bufonly'
   Plugin 'git://github.com/rhysd/devdocs.vim.git'
   Plugin 'git://github.com/vimwiki/vimwiki.git'
+  Plugin 'git://github.com/tpope/vim-rails.git'
+  Plugin 'wesQ3/vim-windowswap'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,7 +63,7 @@ set mouse=a
 set laststatus=2
 set t_Co=256
 syntax on
-colorscheme distinguished
+colorscheme deep-space
 
 "use relative lines unless focus lost
 autocmd FocusLost * :set number
@@ -155,3 +158,9 @@ let g:syntastic_javascript_checkers = ['eslint']
 "wiki
 let g:vimwiki_list = [{'path': '~/projects/notebook'}]
 filetype indent off
+
+"paneswapper
+let g:windowswap_map_keys = 0 "prevent default bindings
+nnoremap <silent> <leader>uw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>yw :call WindowSwap#EasyWindowSwap()<CR>
