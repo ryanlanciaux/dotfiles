@@ -21,6 +21,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-bufferline'
 
 " file explorer
 Plug 'scrooloose/nerdtree'
@@ -34,6 +35,9 @@ Plug 'vimwiki/vimwiki'
 
 " Buffer management
 Plug 'jeetsukumaran/vim-buffergator'
+
+" ack search tool
+Plug 'dyng/ctrlsf.vim'
 
 " async program runner (mainly using for syntastic-like functionality)
 Plug 'neomake/neomake'
@@ -81,11 +85,13 @@ set incsearch
 set visualbell
 set noerrorbells
 
+" tab settings
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
 
+" turn off backups since ... git
 set nobackup
 set noswapfile
 
