@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/ryan/.config/nvim'
+let g:netrw_dirhist_2='/home/ryan/projects/javascript/Griddle'
+let g:netrw_dirhist_3='/home/ryan/projects/javascript/Griddle/src'
+let g:netrw_dirhist_4='/home/ryan/projects/javascript/Griddle'
+let g:netrw_dirhist_5='/home/ryan/projects/javascript/Griddle/src'
