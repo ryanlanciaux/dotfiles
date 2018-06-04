@@ -10,10 +10,10 @@ call vundle#begin()
   Plugin 'git://github.com/mxw/vim-jsx.git'
   Plugin 'git://github.com/tyrannicaltoucan/vim-deep-space.git'
   Plugin 'git://github.com/Lokaltog/vim-distinguished.git'
+  Plugin 'git://github.com/ternjs/tern_for_vim.git'
   Plugin 'jelera/vim-javascript-syntax'
   Plugin 'nathanaelkane/vim-indent-guides'
   Plugin 'Raimondi/delimitMate'
-  Plugin 'scrooloose/syntastic'
   Plugin 'https://github.com/kien/ctrlp.vim.git'
   Plugin 'rizzatti/dash.vim'
   Plugin 'git://github.com/jeetsukumaran/vim-buffergator.git'
@@ -31,7 +31,14 @@ call vundle#begin()
   Plugin 'git://github.com/vimwiki/vimwiki.git'
   Plugin 'git://github.com/tpope/vim-rails.git'
   Plugin 'wesQ3/vim-windowswap'
-
+  Plugin 'w0rp/ale'
+  Plugin 'dracula/vim'
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'mattn/emmet-vim'
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+  Plugin 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 call vundle#end()            " required
 filetype plugin indent on    " required
 filetype plugin on
@@ -63,7 +70,7 @@ set mouse=a
 set laststatus=2
 set t_Co=256
 syntax on
-colorscheme deep-space
+color dracula
 
 "use relative lines unless focus lost
 autocmd FocusLost * :set number
@@ -164,3 +171,37 @@ let g:windowswap_map_keys = 0 "prevent default bindings
 nnoremap <silent> <leader>uw :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <silent> <leader>yw :call WindowSwap#EasyWindowSwap()<CR>
+
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier', 'eslint']
+let g:ale_fix_on_save = 1
+
+let g:ale_sign_error = '●' 
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 
+let g:ale_javascript_prettier_use_local_config = 1
+
+let g:deoplete#sources#ternjs#timeout = 1
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#depths = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#filter = 0
+let g:deoplete#sources#ternjs#case_insensitive = 1
+let g:deoplete#sources#ternjs#guess = 0
+
+let g:deoplete#sources#ternjs#sort = 1
+let g:deoplete#sources#ternjs#expand_word_forward = 0
+
+let g:deoplete#sources#ternjs#omit_object_prototype = 0
+
+let g:deoplete#sources#ternjs#include_keywords = 1
+
+let g:deoplete#sources#ternjs#in_literal = 0
+
+
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ '...'
+                \ ]
