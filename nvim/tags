@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<C-j>	config/02.settings.vim	/^inoremap <C-j> <Esc>:m .+1<CR>==gi$/;"	m
+<C-j>	config/02.settings.vim	/^nnoremap <C-j> :m .+1<CR>==$/;"	m
+<C-j>	config/02.settings.vim	/^vnoremap <C-j> :m '>+1<CR>gv=gv$/;"	m
+<C-k>	config/02.settings.vim	/^inoremap <C-k> <Esc>:m .-2<CR>==gi$/;"	m
+<C-k>	config/02.settings.vim	/^nnoremap <C-k> :m .-2<CR>==$/;"	m
+<C-k>	config/02.settings.vim	/^vnoremap <C-k> :m '<-2<CR>gv=gv$/;"	m
+<Leader>e	config/03.plugin-settings.vim	/^nmap <silent> <Leader>e :NERDTreeToggle<CR>$/;"	m
+<leader>T	config/03.plugin-settings.vim	/^nmap <leader>T :enew<cr>$/;"	m
+<leader>bb	config/03.plugin-settings.vim	/^nmap <leader>bb :CtrlPBuffer<cr>$/;"	m
+<leader>bl	config/03.plugin-settings.vim	/^nmap <leader>bl :BuffergatorOpen<cr>$/;"	m
+<leader>bm	config/03.plugin-settings.vim	/^nmap <leader>bm :CtrlPMixed<cr>$/;"	m
+<leader>bq	config/03.plugin-settings.vim	/^nmap <leader>bq :bp <BAR> bd #<cr>$/;"	m
+<leader>bs	config/03.plugin-settings.vim	/^nmap <leader>bs :CtrlPMRU<cr>]'$/;"	m
+<leader>ev	config/03.plugin-settings.vim	/^nmap <silent> <leader>ev :e $MYVIMRC<CR>$/;"	m
+<leader>fp	config/03.plugin-settings.vim	/^nmap <leader>fp :Prettier$/;"	m
+<leader>jj	config/03.plugin-settings.vim	/^nmap <leader>jj :BuffergatorMruCyclePrev<cr>$/;"	m
+<leader>kk	config/03.plugin-settings.vim	/^nmap <leader>kk :BuffergatorMruCycleNext<cr>$/;"	m
+<leader>p	config/03.plugin-settings.vim	/^nmap <leader>p :CtrlP<cr>$/;"	m
+<leader>pw	config/03.plugin-settings.vim	/^nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>$/;"	m
+<leader>sf	config/03.plugin-settings.vim	/^nmap <leader>sf <Plug>CtrlSFPrompt$/;"	m
+<leader>sv	config/03.plugin-settings.vim	/^nmap <silent> <leader>sv :so $MYVIMRC<CR>$/;"	m
+<leader>uw	config/03.plugin-settings.vim	/^nnoremap <silent> <leader>uw :call WindowSwap#MarkWindowSwap()<CR>$/;"	m
+<leader>yw	config/03.plugin-settings.vim	/^nnoremap <silent> <leader>yw :call WindowSwap#EasyWindowSwap()<CR>$/;"	m
+g:airline#extensions#tabline#enabled	config/03.plugin-settings.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:buffergator_mru_cycle_loop	config/03.plugin-settings.vim	/^let g:buffergator_mru_cycle_loop = 1$/;"	v
+g:buffergator_suppress_keymaps	config/03.plugin-settings.vim	/^let g:buffergator_suppress_keymaps = 1$/;"	v
+g:buffergator_viewport_split_policy	config/03.plugin-settings.vim	/^let g:buffergator_viewport_split_policy = 'R'$/;"	v
+g:ctrlp_custom_ignore	config/03.plugin-settings.vim	/^let g:ctrlp_custom_ignore = {$/;"	v
+g:ctrlp_working_path_mode	config/03.plugin-settings.vim	/^let g:ctrlp_working_path_mode = 'r'$/;"	v
+g:indentLine_char	config/02.settings.vim	/^let g:indentLine_char = '|'$/;"	v
+g:indentLine_color_term	config/02.settings.vim	/^let g:indentLine_color_term = 68$/;"	v
+g:indentLine_leadingSpaceChar	config/02.settings.vim	/^let g:indentLine_leadingSpaceChar = '·'$/;"	v
+g:indentLine_leadingSpaceEnabled	config/02.settings.vim	/^let g:indentLine_leadingSpaceEnabled = 0$/;"	v
+g:jsx_ext_required	config/03.plugin-settings.vim	/^let g:jsx_ext_required = 0 "Allow jsx$/;"	v
+g:vimwiki_list	config/03.plugin-settings.vim	/^let g:vimwiki_list = [{'path': '~\/projects\/notebook'}]$/;"	v
+g:windowswap_map_keys	config/03.plugin-settings.vim	/^let g:windowswap_map_keys = 0 "prevent deefault bindings$/;"	v
+mapleader	config/02.settings.vim	/^let mapleader=","$/;"	v
